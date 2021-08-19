@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "yespace";
+    /* Project id 2750114 */
+    src: url('//at.alicdn.com/t/font_2750114_7t9qr80zdjk.woff2?t=1629183645649') format('woff2'),
+        url('//at.alicdn.com/t/font_2750114_7t9qr80zdjk.woff?t=1629183645649') format('woff'),
+        url('//at.alicdn.com/t/font_2750114_7t9qr80zdjk.ttf?t=1629183645649') format('truetype');
+}
+
+.yespace {
+    font-family: "yespace" !important;
+    /* font-size: 16px; */
+    margin-right: 2px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.yyzb:before {
+    content: "\e615";
+}
+
+.yyjiaofuriqi:before {
+    content: "\e667";
+}

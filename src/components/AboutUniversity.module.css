@@ -1,0 +1,127 @@
+/* stylelint-disable docusaurus/copyright-header */
+
+.universities {
+    display: flex;
+    align-items: center;
+    padding: 4rem 0;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    /* background-color: var(--ifm-color-gray-200); */
+}
+
+.universities::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    right: 0px;
+    pointer-events: none;
+    background-image: linear-gradient(to right, var(--ifm-color-primary-mask),
+            var(--ifm-color-primary-mask-gradient) 20%,
+            var(--ifm-color-primary-mask-gradient) 80%,
+            var(--ifm-color-primary-mask));
+    height: 100%;
+    z-index: 1;
+}
+
+@media screen and (max-width: 996px) {
+    .universities::after {
+        background-image: linear-gradient(to right, var(--ifm-color-primary-mask),
+                var(--ifm-color-primary-mask-gradient) 0%,
+                var(--ifm-color-primary-mask-gradient) 100%,
+                var(--ifm-color-primary-mask));
+    }
+}
+
+.universitySvg {
+    padding: 1rem;
+    height: 200px;
+    width: 200px;
+}
+
+.Headline {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.universityCard {
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 1rem !important;
+    /* width: 30%;  */
+}
+
+
+.universityCard:hover {
+    box-shadow: 0px 0px 9px var(--ifm-color-primary-shadow);
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.universityRow {
+    justify-content: space-between;
+}
+
+.title {
+    margin-bottom: 2px;
+}
+
+.date {
+    /* margin-bottom: 2px; */
+    margin-bottom: 2px; 
+    color: var(--ifm-color-gray-600);
+    font-size: 14px;
+    /* font-weight: bold; */
+}
+
+.description {
+    margin-bottom: 2px;
+}
+
+.tag {
+    margin-left: -3px;
+    /* margin-bottom: 5px; */
+    font-size: 14px;
+    margin-right: 8px;
+    color: var(--ifm-color-primary);
+    padding: 2px 5px 2px 3px;
+    border-radius: 5px;
+    background-color: var(--ifm-color-primary-tag);
+}
+
+.description {
+    /* margin-top: 15px; */
+}
+
+.url {
+    font-size: 18px;
+}
+
+.url:hover {
+    background-color: var(--ifm-color-primary);
+    font-weight: bold;
+    transition: 0.5s;
+    color: var(--ifm-color-gray-100);
+    text-decoration: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+
+html[data-theme='dark'] .url:hover {
+    color: var(--ifm-color-gray-900);
+}
+
+/* 内容样式 */
+
+.iconfontTag {
+    width: 16px;
+    height: 16px;
+    vertical-align: -0.2em;
+    /* color: #1c1e21; */
+    fill: var(--ifm-color-primary);
+    overflow: hidden;
+    margin-right: 2px;
+}
+

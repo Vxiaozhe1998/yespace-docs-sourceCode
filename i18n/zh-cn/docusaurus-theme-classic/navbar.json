@@ -1,0 +1,22 @@
+{
+  "title": {
+    "message": "悠悦易存",
+    "description": "The title in the navbar"
+  },
+  "item.label.Tutorial": {
+    "message": "使用手册",
+    "description": "Navbar item with label Tutorial"
+  },
+  "item.label.Blog": {
+    "message": "新闻",
+    "description": "Navbar item with label Blog"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  },
+  "item.label.About": {
+    "message": "关于我们",
+    "description": "Navbar item with label About"
+  }
+}

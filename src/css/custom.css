@@ -1,0 +1,108 @@
+/* stylelint-disable docusaurus/copyright-header */
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+html,
+body {
+  overflow-x: hidden;
+}
+/*{
+  outline: solid #f00 1px !important;
+  background: #000 !important;
+  color: #fff !important;
+} */
+
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #4662d9;
+  --ifm-color-primary-mask: #ffffff;
+  --ifm-color-primary-mask-gradient: #ffffff00;
+  --ifm-color-primary-tag: #4662d926;
+  --ifm-color-primary-shadow: #4662d980;
+  --ifm-color-primary-dark: #2e4ed4;
+  --ifm-color-primary-darker: #2a48ca;
+  --ifm-color-primary-darkest: #223ba7;
+  --ifm-color-primary-light: #5e76de;
+  --ifm-color-primary-lighter: #6a80e0;
+  --ifm-color-primary-lightest: #8d9fe8;
+  --ifm-code-font-size: 95%;
+}
+
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+html[data-theme='dark'] .docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+html[data-theme='dark'] {
+  --ifm-color-primary: #ffd103;
+  --ifm-color-primary-mask: #18191a;
+  --ifm-color-primary-mask-gradient: #18191a00;
+  --ifm-color-primary-tag: #ffd10326;
+  --ifm-color-primary-shadow: #ffd10380;
+  --ifm-color-primary-dark: #e8be00;
+  --ifm-color-primary-darker: #dbb300;
+  --ifm-color-primary-darkest: #b59400;
+  --ifm-color-primary-light: #ffd61d;
+  --ifm-color-primary-lighter: #ffd82a;
+  --ifm-color-primary-lightest: #ffdf50;
+}
+
+
+html[data-theme='dark'] .button--secondary:not(.button--outline) {
+  background-color: var(--ifm-color-gray-900);
+  color: var(--ifm-color-primary);
+  border-color: var(--ifm-color-gray-900);
+}
+
+html[data-theme='dark'] .button--secondary:not(.button--outline):hover {
+  background-color: transparent;
+  transition: 0.5s;
+  color: var(--ifm-color-gray-900);
+  border-color: var(--ifm-color-gray-900);
+}
+
+.button--secondary:not(.button--outline) {
+  background-color: var(--ifm-color-white);
+  color: var(--ifm-color-primary);
+  border-color: var(--ifm-color-white);
+}
+
+.button--secondary:not(.button--outline):hover {
+  background-color: transparent;
+  transition: 0.5s;
+  color: var(--ifm-color-white);
+  border-color: var(--ifm-color-white);
+}
+
+.footer__links {
+  text-align: center;
+}
+
+html[data-theme='light'] .footer {
+  background-color: var(--ifm-color-gray-200);
+  box-shadow: 0 0 10px var(--ifm-color-primary-shadow);
+}
+
+html[data-theme='dark'] .footer {
+  box-shadow: 0 0 10px var(--ifm-color-primary-shadow);
+}
+
+/* 博客页面标题大小 */
+/* .blogPostTitle_node_modules-\@docusaurus-theme-classic-lib-next-theme-BlogPostItem-styles-module{
+  font-size: 1.5rem !important;
+} */
+
+@media screen and (max-width: 996px) {
+  .navbar__items {
+    justify-content: space-between;
+  }
+}
