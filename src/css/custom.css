@@ -4,21 +4,23 @@
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
  */
-html,
-body {
-  overflow-x: hidden;
-}
 /*{
   outline: solid #f00 1px !important;
   background: #000 !important;
   color: #fff !important;
 } */
+body,
+html {
+  width: 100%;
+  overflow-x: hidden !important;
+}
 
 
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #4662d9;
   --ifm-color-primary-mask: #ffffff;
+  --ifm-color-primary-mask-bg: #ffffff26;
   --ifm-color-primary-mask-gradient: #ffffff00;
   --ifm-color-primary-tag: #4662d926;
   --ifm-color-primary-shadow: #4662d980;
@@ -45,6 +47,7 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 html[data-theme='dark'] {
   --ifm-color-primary: #ffd103;
   --ifm-color-primary-mask: #18191a;
+  --ifm-color-primary-mask-bg: #18191a26;
   --ifm-color-primary-mask-gradient: #18191a00;
   --ifm-color-primary-tag: #ffd10326;
   --ifm-color-primary-shadow: #ffd10380;
@@ -87,13 +90,48 @@ html[data-theme='dark'] .button--secondary:not(.button--outline):hover {
   text-align: center;
 }
 
+.footer__link-item {
+  color: var(--ifm-color-gray-400);
+  display: inline-block;
+  position: relative;
+  cursor: pointer
+}
+
+.footer__link-item::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--ifm-color-primary);
+  transform-origin: bottom right;
+  transition: transform .4s cubic-bezier(.86, 0, .07, 1)
+}
+
+a.footer__link-item:hover {
+  transition: 0.5s;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--ifm-color-primary) !important;
+}
+
+.footer__link-item:hover::after {
+  text-decoration: none;
+  transform: scaleX(1);
+  transform-origin: bottom left
+}
+
 html[data-theme='light'] .footer {
-  background-color: var(--ifm-color-gray-200);
+  background-color: #2b3137;
+  color: var(--ifm-color-gray-400);
   box-shadow: 0 0 10px var(--ifm-color-primary-shadow);
 }
 
 html[data-theme='dark'] .footer {
   box-shadow: 0 0 10px var(--ifm-color-primary-shadow);
+  color: var(--ifm-color-gray-400);
 }
 
 /* 博客页面标题大小 */
@@ -104,5 +142,212 @@ html[data-theme='dark'] .footer {
 @media screen and (max-width: 996px) {
   .navbar__items {
     justify-content: space-between;
+  }
+}
+
+/* 文档相关 */
+.markdown code {
+  background-color: var(--ifm-color-primary-tag);
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+  border-color: var(--ifm-color-primary);
+}
+
+.markdown strong {
+  color: var(--ifm-color-primary);
+}
+
+.markdown del {
+  color: var(--ifm-color-primary);
+}
+
+.markdown .tabs-container {
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  background-color: var(--ifm-color-primary-tag);
+}
+
+.alert .tabs-container {
+  background-color: var(--ifm-color-primary-mask-bg);
+}
+
+
+.markdown .playgroundHeader_node_modules-\@docusaurus-theme-live-codeblock-src-theme-Playground-styles-module:first-of-type {
+  background-color: var(--ifm-color-primary);
+}
+
+.markdown blockquote {
+  border-color: var(--ifm-color-primary);
+  background-color: var(--ifm-color-primary-tag);
+}
+
+.markdown p>a {
+  border-bottom: 1px dotted var(--ifm-color-primary);
+}
+
+.alert code {
+  border: 1px solid var(--ifm-alert-border-color) !important;
+  color: white !important;
+  background-color: var(--ifm-alert-border-color) !important;
+}
+
+.alert a {
+  border-bottom: 1px dotted var(--ifm-alert-border-color) !important;
+  text-decoration: none !important;
+  color: var(--ifm-alert-border-color);
+}
+
+.alert a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -1px;
+  left: 0;
+  background-color: var(--ifm-alert-border-color) !important;
+  transform-origin: bottom right;
+  transition: transform .4s cubic-bezier(.86, 0, .07, 1)
+}
+
+.alert strong {
+  color: var(--ifm-alert-border-color);
+}
+
+.alert a:hover {
+  text-decoration: none;
+}
+
+.alert a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left
+}
+
+.markdown p>a {
+  /* display: inline-block; */
+  position: relative;
+  cursor: pointer
+}
+
+.markdown p>a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -1px;
+  left: 0;
+  background-color: var(--ifm-color-primary);
+  transform-origin: bottom right;
+  transition: transform .4s cubic-bezier(.86, 0, .07, 1)
+}
+
+.markdown p>a:hover {
+  text-decoration: none;
+}
+
+.markdown p>a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left
+}
+
+/* 标题样式 */
+p {
+  line-height: 1.65 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7,
+h8,
+h9,
+h10 {
+  line-height: 1.65;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 30px !important;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6,
+h7,
+h8,
+h9,
+h10 {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 996px) {
+  p {
+    line-height: 26px !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  h7,
+  h8,
+  h9,
+  h10 {
+    font-weight: 600;
+  }
+
+  h1 {
+    font-size: 30px !important;
+    line-height: 42px;
+  }
+
+  h2 {
+    font-size: 26px !important;
+    line-height: 37px;
+  }
+
+  h3 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  h4 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  h5 {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  h6,
+  h7,
+  h8,
+  h9,
+  h10 {
+    font-size: 16px;
+    line-height: 22px;
   }
 }

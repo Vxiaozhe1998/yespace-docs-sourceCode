@@ -7,6 +7,14 @@
     "message": "使用手册",
     "description": "Navbar item with label Tutorial"
   },
+  "item.label.Business": {
+    "message": "商务合作",
+    "description": "Navbar item with label Tutorial"
+  },
+  "item.label.links": {
+    "message": "友情链接",
+    "description": "Navbar item with label Tutorial"
+  },
   "item.label.Blog": {
     "message": "新闻",
     "description": "Navbar item with label Blog"

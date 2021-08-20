@@ -22,6 +22,13 @@ module.exports = {
     // algolia: {
     //   contextualSearch: true,
     // },
+    announcementBar: {
+      id: "support_us", // 用于辨别此消息的值。
+      content: "✨ 该网站正在搭建 ✨",
+      backgroundColor: "#fafbfc", // 默认为 `#fff`.
+      textColor: "#091E42", // 默认为 `#000`.
+      isCloseable: false, // 默认为 `true`.
+    },
     colorMode: {
       defaultMode: "dark",
       disableSwitch: false,
@@ -40,6 +47,7 @@ module.exports = {
       },
     },
     navbar: {
+      hideOnScroll: true,
       title: "Yespace",
       logo: {
         alt: "Yesoace Logo",
@@ -52,16 +60,41 @@ module.exports = {
           docId: "intro",
           position: "left",
           label: "Tutorial",
+          // docsPluginId: "user"
         },
         {
-          to: "/blog",
+          to: "business",
+          type: "doc",
+          docId: "intro",
+          label: "Business",
+          position: "left",
+          docsPluginId: "business"
+        },
+        {
+          to: "blog",
           label: "Blog",
           position: "left",
         },
         {
-          to: "/about",
+          to: "about",
           label: "About",
           position: "left",
+        },
+        {
+          type: 'dropdown',
+          label: 'links',
+          position: 'right',
+          items: [
+            {
+              label: 'Facebook',
+              href: 'https://www.facebook.com',
+            },
+            {
+              label: 'Facebook',
+              href: 'https://www.facebook.com',
+            },
+            // ... more items
+          ],
         },
         // {
         //   href: 'https://github.com/facebook/docusaurus',
@@ -86,7 +119,7 @@ module.exports = {
             // },
             {
               label: "Deposit and fetch",
-              to: "/docs/basic/aboutAccess",
+              to: "user/basic/aboutAccess",
             },
           ],
         },
@@ -95,7 +128,7 @@ module.exports = {
           items: [
             {
               label: "Blog",
-              to: "/blog",
+              to: "blog",
             },
           ],
         },
@@ -104,11 +137,11 @@ module.exports = {
           items: [
             {
               label: "Privacy",
-              to: "/docs/terms/userPrivacyPolicy",
+              to: "user/terms/userPrivacyPolicy",
             },
             {
               label: "Contact",
-              to: "/docs/afterSales/contactUs",
+              to: "user/afterSales/contactUs",
             },
           ],
         },
@@ -121,15 +154,29 @@ module.exports = {
       darkTheme: darkCodeTheme,
     },
   },
+  plugins: [
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "business",
+        path: "business",
+        routeBasePath: "business",
+        sidebarPath: require.resolve("./sidebarsBusiness.js"),
+        // ... 其他设置
+      },
+    ],
+  ],
   presets: [
     [
       "@docusaurus/preset-classic",
       {
         docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
+          path:'user',
+          routeBasePath:'user',
+          sidebarPath: require.resolve("./sidebarsUser.js"),
           // Please change this to your repo.
-          editUrl:
-            "https://github.com/Vxiaozhe1998/yespace-docs/tree/gh-pages/",
+          // editUrl:
+          //   "https://github.com/Vxiaozhe1998/yespace-docs/tree/gh-pages/",
         },
         blog: {
           /**

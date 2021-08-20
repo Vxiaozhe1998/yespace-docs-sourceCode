@@ -3,6 +3,12 @@
  * CSS files with the .module.css suffix will be treated as CSS modules
  * and scoped locally.
  */
+.heroTitle{
+  font-size: 3rem;
+}
+.heroSubtitle{
+  font-size: 2rem;
+}
 
 .heroBanner {
   padding: 8rem 0;
@@ -14,6 +20,13 @@
 }
 
 @media screen and (max-width: 996px) {
+  .heroTitle{
+    font-size: 2rem;
+  }
+  .heroSubtitle{
+    font-size: 1.5rem;
+  }
+  
   .heroBanner {
     padding: 2rem;
     text-align: center;

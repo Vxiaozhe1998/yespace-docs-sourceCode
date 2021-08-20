@@ -31,18 +31,18 @@ function HomepageHeader() {
       <div className="container">
         <div className="row">
           <div className="col col--10">
-            <h1 className="hero__title">{siteConfig.title}</h1>
-            <p className="hero__subtitle">{siteConfig.tagline}</p>
+            <b className={clsx(styles.heroTitle)}>{siteConfig.title}</b>
+            <p className={clsx(styles.heroSubtitle)}>{siteConfig.tagline}</p>
             <div className={clsx("row",styles.buttons)}>
               <Link
                 className="button button--secondary button--lg"
-                to="/docs/intro"
+                to="/user/intro"
               >
                 使用教程 ⏱️
               </Link>
               <Link
                 className="button button--secondary button--lg"
-                to="/docs/intro"
+                to="/business/intro"
               >
                 商务咨询 ☎️
               </Link>
