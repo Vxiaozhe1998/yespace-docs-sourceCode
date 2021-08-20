@@ -15,6 +15,43 @@ html {
   overflow-x: hidden !important;
 }
 
+.menu__link--active:not(.menu__link--sublist) {
+  position: relative;
+}
+
+@keyframes long {
+  from {
+    height: 0;
+    width: 0;
+  }
+
+  to {
+    width:5px;
+    height: 15px;
+  }
+}
+.menu__link{
+  padding:var(--ifm-menu-link-padding-vertical) 0.75rem;
+}
+.menu__link--active:not(.menu__link--sublist)::before {
+  position: absolute;
+  left: 0;
+  /* left: 50%; */
+  top: 50%;
+  transform: translate(0%, -50%);
+  /* top:8px; */
+  bottom: auto;
+  content: " ";
+  justify-content: center;
+  align-items: center;
+  width: long;
+  animation-name: long;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+  border-radius: 0.25em;
+  background-color: var(--ifm-color-primary);
+}
 
 /* You can override the default Infima variables here. */
 :root {
