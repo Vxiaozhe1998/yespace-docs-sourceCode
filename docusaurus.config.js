@@ -22,11 +22,12 @@ module.exports = {
     // algolia: {
     //   contextualSearch: true,
     // },
+    // 网站公告栏
     announcementBar: {
       id: "support_us", // 用于辨别此消息的值。
-      content: "✨ 该网站正在搭建 ✨",
-      backgroundColor: "#fafbfc", // 默认为 `#fff`.
-      textColor: "#091E42", // 默认为 `#000`.
+      content: "✨ 该网站正在搭建中.... ✨",
+      backgroundColor: "var(--ifm-color-primary)", // 默认为 `#fff`.
+      textColor: "var(--ifm-table-head-color)", // 默认为 `#000`.
       isCloseable: false, // 默认为 `true`.
     },
     colorMode: {
