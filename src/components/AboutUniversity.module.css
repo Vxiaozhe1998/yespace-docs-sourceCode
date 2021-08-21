@@ -55,7 +55,7 @@
 
 
 .universityCard:hover {
-    box-shadow: 0px 0px 9px var(--ifm-color-primary-shadow);
+    box-shadow: 0px 0px 10px var(--ifm-color-primary-shadow);
     border-radius: 10px;
     transition: 1s;
 }
