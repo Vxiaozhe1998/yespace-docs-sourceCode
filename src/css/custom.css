@@ -26,13 +26,15 @@ html {
   }
 
   to {
-    width:5px;
+    width: 5px;
     height: 15px;
   }
 }
-.menu__link{
-  padding:var(--ifm-menu-link-padding-vertical) 0.75rem;
+
+.menu__link {
+  padding: var(--ifm-menu-link-padding-vertical) 0.75rem;
 }
+
 .menu__link--active:not(.menu__link--sublist)::before {
   position: absolute;
   left: 0;
@@ -68,6 +70,7 @@ html {
   --ifm-color-primary-lighter: #6a80e0;
   --ifm-color-primary-lightest: #8d9fe8;
   --ifm-code-font-size: 95%;
+  --ifm-table-head-color: #ffffff;
 }
 
 .docusaurus-highlight-code-line {
@@ -94,6 +97,7 @@ html[data-theme='dark'] {
   --ifm-color-primary-light: #ffd61d;
   --ifm-color-primary-lighter: #ffd82a;
   --ifm-color-primary-lightest: #ffdf50;
+  --ifm-table-head-color: #18191a;
 }
 
 
@@ -183,21 +187,47 @@ html[data-theme='dark'] .footer {
 }
 
 /* 文档相关 */
+
+/* 文档表格 */
+table thead tr {
+  word-break: keep-all;
+  background-color: var(--ifm-color-primary);
+  /* color:var(--ifm-color-primary); */
+}
+
+table {
+  border-radius: 10px;
+  border: 1px solid var(--ifm-color-primary);
+}
+
+table th,
+table td,
+table tr,
+table thead tr {
+  border: none;
+}
+
+/* 文档键帽代码 */
 .markdown code {
   background-color: var(--ifm-color-primary-tag);
   color: var(--ifm-color-primary);
   font-weight: 600;
+  white-space: nowrap;
   border-color: var(--ifm-color-primary);
 }
 
+/* 文档加粗文本 */
 .markdown strong {
   color: var(--ifm-color-primary);
 }
 
+
+/* 文档删除文本 */
 .markdown del {
   color: var(--ifm-color-primary);
 }
 
+/* 文档选项卡 */
 .markdown .tabs-container {
   padding: 1rem;
   border-radius: 10px;
@@ -205,30 +235,26 @@ html[data-theme='dark'] .footer {
   background-color: var(--ifm-color-primary-tag);
 }
 
+/* 引用块中的选项卡 */
 .alert .tabs-container {
   background-color: var(--ifm-color-primary-mask-bg);
 }
 
-
-.markdown .playgroundHeader_node_modules-\@docusaurus-theme-live-codeblock-src-theme-Playground-styles-module:first-of-type {
-  background-color: var(--ifm-color-primary);
-}
-
+/* 引用快 */
 .markdown blockquote {
   border-color: var(--ifm-color-primary);
   background-color: var(--ifm-color-primary-tag);
 }
 
-.markdown p>a {
-  border-bottom: 1px dotted var(--ifm-color-primary);
-}
-
+/* 告示中的键帽代码 */
 .alert code {
   border: 1px solid var(--ifm-alert-border-color) !important;
   color: white !important;
   background-color: var(--ifm-alert-border-color) !important;
 }
 
+
+/* 告示中的链接样式 */
 .alert a {
   border-bottom: 1px dotted var(--ifm-alert-border-color) !important;
   text-decoration: none !important;
@@ -259,6 +285,11 @@ html[data-theme='dark'] .footer {
 .alert a:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left
+}
+
+/* 正文中的a标签 */
+.markdown p>a {
+  border-bottom: 1px dotted var(--ifm-color-primary);
 }
 
 .markdown p>a {
