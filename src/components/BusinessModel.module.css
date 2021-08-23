@@ -1,6 +1,132 @@
 /* 容器属性 */
 
-.BusinessModel{
+.BusinessModel {
     padding: 3rem 0;
     background-color: var(--ifm-color-emphasis-100);
+    position: relative;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 996px) {
+    .image {
+        width: 0;
+        /* -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(250, 250, 250, 0.5))); */
+        /* box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(250, 250, 250, 0.5))); */
+    }
+
+    .headline {
+        margin-top: 20px;
+        text-align: center;
+        border: none !important;
+    }
+
+    .headline::after {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-60%);
+        top: -30px;
+        /* height: 20px; */
+        margin-left: 0;
+        content: "🔥";
+        background: #00000000 !important;
+    }
+
+    .item {
+        justify-content: center !important;
+    }
+    .subtitle {
+        margin-top: 20px !important;
+        text-align: center;
+    }
+    .tagSub {
+        max-width: 300px !important;
+        text-align: center;
+    }
+    .charge{
+        text-align: center;
+    }
+}
+
+.tag {
+    color: var(--ifm-table-head-color);
+    background-color: var(--ifm-color-primary);
+    padding: 1px 4px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.tagSub {
+    color: var(--ifm-color-primary);
+    background-color: var(--ifm-color-primary-tag);
+    border: var(--ifm-color-primary) 1px solid;
+    padding: 4px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.item {
+    margin: 5px 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.description {
+    color: var(--ifm-color-primary);
+    font-weight: 400;
+    margin-left: 10px;
+    font-size: 24px;
+}
+
+.subtitle {
+    font-size: 28px;
+    color: var(--ifm-color-primary);
+    margin-bottom: 5px;
+    margin-top: 40px;
+}
+
+.headline {
+    border-bottom: 2px dotted var(--ifm-color-emphasis-400);
+    margin-bottom: 0;
+    position: relative;
+}
+
+.headline::after {
+    content: "🔥 热度最高";
+    font-size: 16px;
+    font-weight: bolder;
+    background: #c0000026;
+    border-radius: 5px;
+    color: #c00000;
+    padding: 2px 4px;
+    margin-left: 10px;
+}
+
+html[data-theme='dark'] .headline::after {
+    background: #c00000;
+    color: white;
+}
+
+.charge {
+    margin-top: 10px;
+}
+
+.charge>p {
+    font-size: 24px;
+    font-weight: 800;
+    display: inline;
+    position: relative;
+}
+
+.charge>p::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 15px;
+    left: 0;
+    border-radius: 10px;
+    width: 100%;
+    z-index: 1;
+    background-color: var(--ifm-color-primary-tag);
 }

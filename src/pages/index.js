@@ -8,6 +8,7 @@ import styles from "./index.module.css";
 import HomepageFeatures from "../components/HomepageFeatures";
 import AboutUniversity from "../components/AboutUniversity";
 import BusinessModel from "../components/BusinessModel";
+import "animate.css";
 
 // var AboutUniversity = React.lazy(() => import("../components/AboutUniversity"));
 
@@ -64,7 +65,7 @@ export default function Home() {
       description="Description will go into a meta tag in <head />"
     >
       <HomepageHeader />
-      <main>
+      <main  className={clsx("animate__animated animate__fadeInUp")}>
         <AboutUniversity />
         <BusinessModel />
         <HomepageFeatures />

@@ -57,7 +57,7 @@
 .universityCard:hover {
     box-shadow: 0px 0px 10px var(--ifm-color-primary-shadow);
     border-radius: 10px;
-    transition: 1s;
+    transition: 0.5s;
 }
 /* 高校卡片链接样式 */
 .universitiyCardLink{
