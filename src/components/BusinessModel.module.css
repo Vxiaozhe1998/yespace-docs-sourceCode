@@ -2,131 +2,177 @@
 
 .BusinessModel {
     padding: 3rem 0;
-    background-color: var(--ifm-color-emphasis-100);
-    position: relative;
+    /* height: 80vh; */
     overflow: hidden;
+    position: relative;
+    background-image: url("../../static/img/index/project.png");
+    background-position: top right;
+    background-color: var(--ifm-color-emphasis-100);
+    background-repeat: no-repeat;
+    background-size: 600px;
 }
 
-@media screen and (max-width: 996px) {
-    .image {
-        width: 0;
-        /* -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(250, 250, 250, 0.5))); */
-        /* box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(250, 250, 250, 0.5))); */
-    }
-
-    .headline {
-        margin-top: 20px;
-        text-align: center;
-        border: none !important;
-    }
-
-    .headline::after {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-60%);
-        top: -30px;
-        /* height: 20px; */
-        margin-left: 0;
-        content: "🔥";
-        background: #00000000 !important;
-    }
-
-    .item {
-        justify-content: center !important;
-    }
-    .subtitle {
-        margin-top: 20px !important;
-        text-align: center;
-    }
-    .tagSub {
-        max-width: 300px !important;
-        text-align: center;
-    }
-    .charge{
-        text-align: center;
-    }
+.headline {
+    text-align: center;
+    width: 100%;
+    z-index: 1;
 }
 
-.tag {
-    color: var(--ifm-table-head-color);
-    background-color: var(--ifm-color-primary);
-    padding: 1px 4px;
+.yespaceCard {
+    width: 35%;
+    z-index: 1;
+    background-color: var(--ifm-color-emphasis-200);
+    padding: 20px 20px 10px 20px;
     border-radius: 5px;
-    font-size: 16px;
+    margin: 10px;
 }
 
-.tagSub {
-    color: var(--ifm-color-primary);
-    background-color: var(--ifm-color-primary-tag);
-    border: var(--ifm-color-primary) 1px solid;
-    padding: 4px 10px;
+.libraryCard {
+    width: 25%;
+    z-index: 1;
+    background-color: var(--ifm-color-emphasis-200);
+    padding: 20px 20px 10px 20px;
     border-radius: 5px;
-    margin-top: 10px;
-    font-size: 20px;
+    margin: 10px;
 }
 
-.item {
-    margin: 5px 0;
+.mainCard {
     display: flex;
-    justify-content: left;
-    align-items: center;
+    flex-wrap: wrap;
 }
 
-.description {
-    color: var(--ifm-color-primary);
-    font-weight: 400;
-    margin-left: 10px;
-    font-size: 24px;
+.imageCard {
+    width: 600px;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    right: 0;
 }
 
 .subtitle {
     font-size: 28px;
     color: var(--ifm-color-primary);
-    margin-bottom: 5px;
-    margin-top: 40px;
 }
 
-.headline {
-    border-bottom: 2px dotted var(--ifm-color-emphasis-400);
-    margin-bottom: 0;
-    position: relative;
-}
 
-.headline::after {
-    content: "🔥 热度最高";
-    font-size: 16px;
-    font-weight: bolder;
-    background: #c0000026;
-    border-radius: 5px;
-    color: #c00000;
+.tag {
+    background-color: var(--ifm-color-primary);
+    color: var(--ifm-table-head-color);
+    font-size: 20px;
     padding: 2px 4px;
+    border-radius: 5px;
+    font-weight: normal;
+}
+
+.description {
+    color: var(--ifm-color-primary);
+    font-size: 24px;
+    font-weight: normal;
     margin-left: 10px;
 }
 
-html[data-theme='dark'] .headline::after {
-    background: #c00000;
-    color: white;
+.item {
+    margin-bottom: 15px;
+}
+
+.tagSub {
+    background-color: var(--ifm-color-primary-tag);
+    font-size: 20px;
+    color: var(--ifm-color-primary);
+    font-weight: normal;
+    border-radius: 5px;
+    border: 1px solid var(--ifm-color-primary);
+    padding: 2px 14px;
 }
 
 .charge {
-    margin-top: 10px;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--ifm-color-emphasis-700);
+    z-index: 1;
+    /* position: relative; */
 }
 
 .charge>p {
-    font-size: 24px;
-    font-weight: 800;
-    display: inline;
     position: relative;
+    display: inline;
 }
 
 .charge>p::after {
-    content: "";
     position: absolute;
-    bottom: -5px;
-    height: 15px;
-    left: 0;
-    border-radius: 10px;
     width: 100%;
+    background-color: var(--ifm-color-primary);
+    height: 20px;
+    border-radius: 10px;
+    left: 0;
+    opacity: 0.25;
+    bottom: -5px;
     z-index: 1;
-    background-color: var(--ifm-color-primary-tag);
+    content: '';
+}
+
+@media screen and (max-width: 996px) {
+    p{
+        margin-bottom:10px;
+    }
+    .BusinessModel::after {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        content: "";
+        top: 0;
+        left: 0;
+        /* backdrop-filter: blur(50px); */
+        background-color: var(--ifm-color-emphasis-100);
+    }
+
+    .libraryCard {
+        width: 100%;
+        /* backdrop-filter: blur(50px); */
+    }
+
+    .yespaceCard {
+        width: 100%;
+    }
+
+    .mainCard {
+        justify-content: space-between;
+    }
+
+    .charge {
+        text-align: center;
+        font-size: 24px;
+    }
+    .charge>p::after {
+        height: 10px;
+        border-radius: 10px;
+        left: 0;
+        opacity: 0.25;
+        bottom: 0;
+        z-index: 1;
+        content: '';
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+
+    .tag {
+        font-size: 16px;
+        padding: 1px 2px;
+    }
+
+    .description {
+        font-size: 18px;
+    }
+
+    .tagSub {
+        font-size: 16px;
+        padding: 2px 14px;
+    }
+    .item {
+        margin-bottom: 5px;
+    }
 }
