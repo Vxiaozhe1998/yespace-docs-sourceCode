@@ -58,6 +58,7 @@ html {
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #4662d9;
+  --ifm-navbar-background-color-bg:#ffffff80;
   --ifm-color-primary-mask: #ffffff;
   --ifm-color-primary-mask-bg: #ffffff26;
   --ifm-color-primary-mask-gradient: #ffffff00;
@@ -86,6 +87,7 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 
 html[data-theme='dark'] {
   --ifm-color-primary: #ffd103;
+  --ifm-navbar-background-color-bg:#18191a80;
   --ifm-color-primary-mask: #18191a;
   --ifm-color-primary-mask-bg: #18191a26;
   --ifm-color-primary-mask-gradient: #18191a00;
@@ -451,11 +453,11 @@ h10 {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 30px !important;
 }
 
 h2 {
-  font-size: 26px;
+  font-size: 26px !important;
 }
 
 h3 {
@@ -497,12 +499,12 @@ h10 {
   }
 
   h1 {
-    font-size: 30px;
+    font-size: 30px !important;
     line-height: 42px;
   }
 
   h2 {
-    font-size: 26px;
+    font-size: 26px !important;
     line-height: 37px;
   }
 

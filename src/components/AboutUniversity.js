@@ -2,6 +2,7 @@ import React from "react";
 import clsx from "clsx";
 import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "./AboutUniversity.module.css";
+import { motion } from "framer-motion";
 import "./icon/iconfont.css";
 import { Link } from "react-router-dom";
 
@@ -117,9 +118,12 @@ function Position({ position }) {
 
 function University({ Svg, title, description, position, date, url }) {
   return (
-    // <a href={url} className={clsx(styles.cardUrl)}>
     <Link to={url} className={clsx(styles.universitiyCardLink)}>
-      <div className={clsx(styles.universityCard)}>
+      <motion.div
+        className={clsx(styles.universityCard)}
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 1 }}
+      >
         <div className="text--center">
           <Svg className={styles.universitySvg} alt={title} />
         </div>
@@ -130,10 +134,6 @@ function University({ Svg, title, description, position, date, url }) {
           ))}
           <p className={styles.description}>{description}</p>
           <p className={styles.date}>
-            {/* <svg className={styles.iconfontSvg} aria-hidden="true">
-            <use xlinkHref="#yyjiaofuriqi"></use>
-          </svg> */}
-            {/* <i className={(iconCss.iconfont, iconCss.yyjiaofuriqi)}></i> */}
             <i className={"yespace yyjiaofuriqi"}></i>
             {date}
           </p>
@@ -143,10 +143,8 @@ function University({ Svg, title, description, position, date, url }) {
             </a>
           </div>
         </div>
-      </div>
+      </motion.div>
     </Link>
-
-    // </a>
   );
 }
 
