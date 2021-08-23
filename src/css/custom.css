@@ -333,8 +333,8 @@ td a:hover::after {
 }
 
 .docusaurus-mt-lg>.text--right>a {
-  width: 120px;
-  height: 40px;
+  /* width: 120px; */
+  /* height: 40px; */
   float: right;
   padding: 5px 10px;
   border-radius: 5px;

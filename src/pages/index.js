@@ -33,7 +33,7 @@ function HomepageHeader() {
           <div className="col col--10">
             <b className={clsx(styles.heroTitle)}>{siteConfig.title}</b>
             <p className={clsx(styles.heroSubtitle)}>{siteConfig.tagline}</p>
-            <div className={clsx("row",styles.buttons)}>
+            <div className={clsx("row", styles.buttons)}>
               <Link
                 className="button button--secondary button--lg"
                 to="/user/intro"
@@ -64,7 +64,6 @@ export default function Home() {
       description="Description will go into a meta tag in <head />"
     >
       <HomepageHeader />
-
       <main>
         <AboutUniversity />
         <BusinessModel />
