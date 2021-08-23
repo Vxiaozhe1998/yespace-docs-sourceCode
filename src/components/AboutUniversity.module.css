@@ -59,7 +59,15 @@
     border-radius: 10px;
     transition: 1s;
 }
-
+/* 高校卡片链接样式 */
+.universitiyCardLink{
+    color: var(--ifm-heading-color);
+}
+.universitiyCardLink:hover{
+    text-decoration: none;
+    color: var(--ifm-heading-color);
+    /* color:var(--ifm-color-primary); */
+}
 .universityRow {
     justify-content: space-between;
 }

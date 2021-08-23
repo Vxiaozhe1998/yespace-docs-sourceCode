@@ -2,4 +2,5 @@
 
 .BusinessModel{
     padding: 3rem 0;
+    background-color: var(--ifm-color-emphasis-100);
 }

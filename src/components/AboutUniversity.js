@@ -3,6 +3,7 @@ import clsx from "clsx";
 import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "./AboutUniversity.module.css";
 import "./icon/iconfont.css";
+import { Link } from "react-router-dom";
 
 /*轮播图插件 */
 import "./Swiper/pagination.min.css";
@@ -17,7 +18,7 @@ const UniversityList = [
     Svg: require("../../static/img/university/qfnu.svg").default,
     position: ["山东省日照市", "山东省济宁市"],
     date: "2019年5月21日",
-    url: "",
+    url: "business/case/qfnu",
     description: (
       <>
         Docusaurus was designed from the ground up to be easily installed and
@@ -30,7 +31,7 @@ const UniversityList = [
     Svg: require("../../static/img/university/zjsu.svg").default,
     position: ["浙江省杭州市"],
     date: "2019年10月8日",
-    url: "",
+    url: "business/case/zjsu",
     description: (
       <>
         Docusaurus was designed from the ground up to be easily installed and
@@ -43,7 +44,7 @@ const UniversityList = [
     Svg: require("../../static/img/university/hhu.svg").default,
     position: ["江苏省南京市"],
     date: "2021年3月3日",
-    url: "",
+    url: "business/case/hhu",
     description: (
       <>
         Docusaurus was designed from the ground up to be easily installed and
@@ -56,7 +57,7 @@ const UniversityList = [
     Svg: require("../../static/img/university/haut.svg").default,
     position: ["河南省郑州市"],
     date: "2021年7月15日",
-    url: "",
+    url: "business/case/haut",
     description: (
       <>
         Docusaurus was designed from the ground up to be easily installed and
@@ -69,7 +70,7 @@ const UniversityList = [
     Svg: require("../../static/img/university/ahnu.svg").default,
     position: ["安徽省芜湖市"],
     date: "计划中...",
-    url: "",
+    url: "business/case/ahnu",
     description: (
       <>
         Extend or customize your website layout by reusing React. Docusaurus can
@@ -82,7 +83,7 @@ const UniversityList = [
     Svg: require("../../static/img/university/ujs.svg").default,
     position: ["江苏省镇江市"],
     date: "计划中...",
-    url: "",
+    url: "business/case/ujs",
     description: (
       <>
         Extend or customize your website layout by reusing React. Docusaurus can
@@ -95,7 +96,7 @@ const UniversityList = [
     Svg: require("../../static/img/university/tongji.svg").default,
     position: ["上海市"],
     date: "计划中...",
-    url: "",
+    url: "business/case/tongji",
     description: (
       <>
         Extend or customize your website layout by reusing React. Docusaurus can
@@ -117,43 +118,46 @@ function Position({ position }) {
 function University({ Svg, title, description, position, date, url }) {
   return (
     // <a href={url} className={clsx(styles.cardUrl)}>
-    <div className={clsx(styles.universityCard)}>
-      <div className="text--center">
-        <Svg className={styles.universitySvg} alt={title} />
-      </div>
-      <div className={(clsx("text--left"), styles.content)}>
-        <h3 className={styles.title}>{title}</h3>
-        {position.map((props, idx) => (
-          <Position key={idx} position={props} />
-        ))}
-        <p className={styles.description}>{description}</p>
-        <p className={styles.date}>
-          {/* <svg className={styles.iconfontSvg} aria-hidden="true">
+    <Link to={url} className={clsx(styles.universitiyCardLink)}>
+      <div className={clsx(styles.universityCard)}>
+        <div className="text--center">
+          <Svg className={styles.universitySvg} alt={title} />
+        </div>
+        <div className={(clsx("text--left"), styles.content)}>
+          <h3 className={styles.title}>{title}</h3>
+          {position.map((props, idx) => (
+            <Position key={idx} position={props} />
+          ))}
+          <p className={styles.description}>{description}</p>
+          <p className={styles.date}>
+            {/* <svg className={styles.iconfontSvg} aria-hidden="true">
             <use xlinkHref="#yyjiaofuriqi"></use>
           </svg> */}
-          {/* <i className={(iconCss.iconfont, iconCss.yyjiaofuriqi)}></i> */}
-          <i className={"yespace yyjiaofuriqi"}></i>
-          {date}
-        </p>
-        <div className="text--right">
-          <a className={styles.url} href={url}>
-            查看更多
-          </a>
+            {/* <i className={(iconCss.iconfont, iconCss.yyjiaofuriqi)}></i> */}
+            <i className={"yespace yyjiaofuriqi"}></i>
+            {date}
+          </p>
+          <div className="text--right">
+            <a className={styles.url} href={url}>
+              查看更多
+            </a>
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
+
     // </a>
   );
 }
 
 export default class AboutUniversity extends React.Component {
-  componentDidMount(){
+  componentDidMount() {
     this.reSize(globalThis.innerWidth);
     this.screenChange();
   }
 
-  screenChange(){
-    window.addEventListener('resize',this.reSize);
+  screenChange() {
+    window.addEventListener("resize", this.reSize);
   }
   constructor() {
     super();
@@ -162,15 +166,14 @@ export default class AboutUniversity extends React.Component {
     };
     this.reSize.bind(this);
   }
-  componentWillUnmount(){
-    window.removeEventListener('resize',this.reSize);
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.reSize);
   }
-  reSize = e => {
+  reSize = (e) => {
     let ev;
-    if(typeof e === 'number'){
+    if (typeof e === "number") {
       ev = e;
-    }
-    else{
+    } else {
       ev = e.target.innerWidth;
     }
     var mediaSize = ev;
