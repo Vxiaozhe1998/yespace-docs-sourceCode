@@ -1,0 +1,101 @@
+.ContactContainer {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1rem;
+    z-index: 5;
+}
+
+.weChat,
+.telePhone {
+    width: 60px;
+    cursor: pointer;
+    height: 60px;
+    display: flex;
+    margin: 15px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: var(--ifm-table-head-color);
+    color: var(--ifm-color-primary);
+    border-radius: 3rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+
+.telePhone:hover {
+    box-shadow: none;
+    background-color: var(--ifm-color-primary);
+    color: var(--ifm-table-head-color);
+    transition: all 0.4s ease 0s;
+}
+
+.telePhone:hover::before {
+    width: 290px;
+    font-size: 30px;
+    height: 70px;
+    background-color: var(--ifm-table-head-color);
+    display: flex;
+    /* justify-content: center; */
+    z-index: -1;
+    padding-left: 30px;
+    border-radius: 3rem;
+    align-items: center;
+    position: absolute;
+    color: var(--ifm-color-primary);
+    right: -5px;
+    top: -5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    content: "400-968-7598";
+    transition: all 0.4s ease 0s;
+}
+
+.weChat>i {
+    font-size: 30px;
+}
+
+.weChat:hover {
+    box-shadow: none;
+    background-color: var(--ifm-color-primary);
+    color: var(--ifm-table-head-color);
+    transition: all 0.4s ease 0s;
+}
+
+@keyframes big {
+    from {
+        width: 0;
+        height: 0;
+    }
+
+    to {
+        width: 200px;
+        height: 200px;
+    }
+
+}
+
+.weChat:hover::before {
+    width: 0;
+    height: 0;
+    animation-name: big;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    border-radius: 10px;
+    position: absolute;
+    background-color: var(--ifm-table-head-color);
+    background-image: url('../../static/img/contact.svg');
+    content: "";
+    right: -5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    bottom: -5px;
+    /* z-index: -1; */
+}
+
+html[data-theme='dark'] .weChat:hover::before {
+    background-image: url('../../static/img/contact-dark.svg');
+    transition: all 0.4s ease 0s;
+}
+
+.telePhone>i {
+    font-size: 28px;
+}

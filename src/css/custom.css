@@ -58,7 +58,7 @@ html {
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #4662d9;
-  --ifm-navbar-background-color-bg:#ffffff80;
+  --ifm-navbar-background-color-bg: #ffffff80;
   --ifm-color-primary-mask: #ffffff;
   --ifm-color-primary-mask-bg: #ffffff26;
   --ifm-color-primary-mask-gradient: #ffffff00;
@@ -72,6 +72,8 @@ html {
   --ifm-color-primary-lightest: #8d9fe8;
   --ifm-code-font-size: 95%;
   --ifm-table-head-color: #ffffff;
+  --ifm-neumorphism-light: #ededed;
+  --ifm-neumorphism-dark: #d3d3d3;
 }
 
 .docusaurus-highlight-code-line {
@@ -87,7 +89,7 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 
 html[data-theme='dark'] {
   --ifm-color-primary: #ffd103;
-  --ifm-navbar-background-color-bg:#18191a80;
+  --ifm-navbar-background-color-bg: #18191a80;
   --ifm-color-primary-mask: #18191a;
   --ifm-color-primary-mask-bg: #18191a26;
   --ifm-color-primary-mask-gradient: #18191a00;
@@ -100,6 +102,8 @@ html[data-theme='dark'] {
   --ifm-color-primary-darker: #ffd82a;
   --ifm-color-primary-darkest: #ffdf50;
   --ifm-table-head-color: #18191a;
+  --ifm-neumorphism-light: #23262a;
+  --ifm-neumorphism-dark: #151618;
 }
 
 
@@ -244,8 +248,8 @@ td a:hover::after {
 
 .markdown hr {
   border-top: 3px dotted var(--ifm-color-primary);
-  border-bottom:none;
-  opacity:0.5;
+  border-bottom: none;
+  opacity: 0.5;
   border-left: none;
   border-right: none;
 }
