@@ -5,9 +5,11 @@ import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import styles from "./index.module.css";
 // import BrowserOnly from "@docusaurus/BrowserOnly";
-import HomepageFeatures from "../components/HomepageFeatures";
+// import HomepageFeatures from "../components/HomepageFeatures";
+// import NewsModel from "../components/NewsModel";
 import AboutUniversity from "../components/AboutUniversity";
 import BusinessModel from "../components/BusinessModel";
+import ContactModel from "../components/ContactModel";
 import "animate.css";
 
 // var AboutUniversity = React.lazy(() => import("../components/AboutUniversity"));
@@ -64,11 +66,13 @@ export default function Home() {
       title={``}
       description="Description will go into a meta tag in <head />"
     >
+      <ContactModel />
       <HomepageHeader />
-      <main  className={clsx("animate__animated animate__fadeInUp")}>
+      <main className={clsx("animate__animated animate__fadeInUp")}>
         <AboutUniversity />
         <BusinessModel />
-        <HomepageFeatures />
+        {/* <NewsModel /> */}
+        {/* <HomepageFeatures /> */}
       </main>
     </Layout>
   );

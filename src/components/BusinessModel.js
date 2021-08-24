@@ -35,7 +35,9 @@ export default class BusinessModel extends React.Component {
     return (
       <div className={clsx(styles.BusinessModel)}>
         <div className={clsx("container", styles.mainCard)}>
-        <h1 className={clsx(styles.headline)}>合作方案</h1>
+          <div className={clsx(styles.headline)}>
+            <h1>合作方案</h1>
+          </div>
           <div className={clsx(styles.yespaceCard)}>
             <p className={clsx(styles.subtitle)}>
               悠悦<strong>免费提供</strong>
@@ -50,8 +52,11 @@ export default class BusinessModel extends React.Component {
             <p className={clsx(styles.tagSub)}>产品部署场地</p>
           </div>
           <div className={clsx(styles.charge)}>
-          <p>&nbsp;仅对隔夜使用行为收取费用&nbsp;</p>
-        </div>
+            <p>&nbsp;仅对隔夜使用行为收取费用&nbsp;</p>
+          </div>
+          <div className={clsx(styles.more)}>
+            <a href="business/case/qfnu">查看更多方案</a>
+          </div>
         </div>
       </div>
     );
