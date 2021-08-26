@@ -1,109 +1,175 @@
 .ContactContainer {
     position: fixed;
-    right: 1.5rem;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     bottom: 1rem;
     z-index: 5;
 }
+
 @media screen and (max-width: 996px) {
     .ContactContainer {
         position: fixed;
         right: 0.5rem;
-        bottom: 0.25rem;
+        bottom: 0.5rem;
         z-index: 5;
     }
 }
 
-.weChat,
-.telePhone {
-    width: 60px;
+.weChat {
+    width: 3.75rem;
     cursor: pointer;
-    height: 60px;
+    height: 3.75rem;
     display: flex;
-    margin: 15px;
     justify-content: center;
+    text-align: right;
     align-items: center;
-    position: relative;
+    margin: 1rem;
     background-color: var(--ifm-table-head-color);
     color: var(--ifm-color-primary);
     border-radius: 3rem;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: var(--ifm-color-primary-shadow) 0px 0px 6px 0px;
 }
-
-
-.telePhone:hover {
-    box-shadow: none;
-    background-color: var(--ifm-color-primary);
-    color: var(--ifm-table-head-color);
-    transition: all 0.4s ease 0s;
-}
-
-.telePhone:hover::before {
-    width: 290px;
-    font-size: 30px;
-    height: 70px;
-    background-color: var(--ifm-table-head-color);
+.telContainer {
+    width: 3.75rem;
+    cursor: pointer;
+    height: 3.75rem;
     display: flex;
-    /* justify-content: center; */
-    z-index: -1;
-    padding-left: 30px;
-    border-radius: 3rem;
+    justify-content:flex-end;
+    text-align: center;
     align-items: center;
-    position: absolute;
+    margin: 1rem;
+    background-color: var(--ifm-table-head-color);
     color: var(--ifm-color-primary);
-    right: -5px;
-    top: -5px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    content: "400-968-7598";
-    transition: all 0.4s ease 0s;
+    border-radius: 3rem;
+    box-shadow: var(--ifm-color-primary-shadow) 0px 0px 6px 0px;
 }
+
+.telePhone{
+    width: 3.75rem;
+    cursor: pointer;
+    height: 3.75rem;
+    display: flex;
+    justify-content: center;
+    text-align: right;
+    align-items: center;
+    border-radius: 3rem;
+}
+.telContainer>a{
+    font-size: 0;
+    float: left;
+}
+.telePhone>i {
+    font-size: 1.875rem;
+}
+.telContainer:hover .telePhone{
+    color: var(--ifm-table-head-color);
+    transition: 0.5s;
+    background-color: var(--ifm-color-primary);
+}
+
+@keyframes long {
+    from {
+        width: 3.75rem;
+    }
+
+    to {
+        width: 18rem;
+    }
+}
+.telContainer:hover{
+    transition: all 0.4s ease 0s;
+    animation-name: long;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    height: 3.75rem;
+}
+
+@keyframes fontBig {
+    from {
+        font-size: 0rem;
+    }
+
+    to {
+        font-size: 1.875rem;
+    }
+}
+
+.telContainer:hover a{
+    margin-right: 0.5rem;
+    /* transition: all 0.4s ease 0s; */
+    animation-delay: 0.2s;
+    animation-name: fontBig;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.telContainer>a:hover{
+    text-decoration: none;
+}
+
 
 .weChat>i {
-    font-size: 30px;
+    font-size: 1.875rem;
+}
+
+.contactImg {
+    width: 0;
+    height: 0;
+    /* filter: hue-rotate(180deg) brightness(2) saturate(1.2); */
+}
+html[data-theme='dark'] .contactImg {
+    filter: hue-rotate(180deg) brightness(2) saturate(1.2);
+}
+
+.weChat:hover i {
+    font-size: 0;
+}
+
+.weChat:hover .contactImg {
+    color: var(--ifm-table-head-color);
+    transition: all 0.4s ease 0s;
+    animation-name: imgbig;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
 }
 
 .weChat:hover {
-    box-shadow: none;
-    background-color: var(--ifm-color-primary);
+    /* box-shadow: none; */
+    /* background-color: var(--ifm-color-primary); */
     color: var(--ifm-table-head-color);
     transition: all 0.4s ease 0s;
+    animation-name: big;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    border-radius: 0.625rem;
 }
 
 @keyframes big {
+    from {
+        width: 3.75rem;
+        height: 3.75rem;
+    }
+
+    to {
+        width: 12.5rem;
+        height: 12.5rem;
+    }
+}
+
+@keyframes imgbig {
     from {
         width: 0;
         height: 0;
     }
 
     to {
-        width: 200px;
-        height: 200px;
+        width: 12rem;
+        height: 12rem;
     }
-
-}
-
-.weChat:hover::before {
-    width: 0;
-    height: 0;
-    animation-name: big;
-    animation-duration: 0.5s;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
-    border-radius: 10px;
-    position: absolute;
-    background-color: var(--ifm-table-head-color);
-    background-image: url('../../static/img/contact.svg');
-    content: "";
-    right: -5px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    bottom: -5px;
-    /* z-index: -1; */
-}
-
-html[data-theme='dark'] .weChat:hover::before {
-    background-image: url('../../static/img/contact-dark.svg');
-    transition: all 0.4s ease 0s;
-}
-
-.telePhone>i {
-    font-size: 28px;
 }

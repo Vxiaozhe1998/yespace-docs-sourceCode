@@ -31,7 +31,7 @@ module.exports = {
       isCloseable: false, // 默认为 `true`.
     },
     colorMode: {
-      defaultMode: "dark",
+      defaultMode: "light",
       disableSwitch: false,
       respectPrefersColorScheme: true,
       switchConfig: {
