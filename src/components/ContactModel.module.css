@@ -1,69 +1,72 @@
 .ContactContainer {
     position: fixed;
-    right: 2rem;
+    right: 48px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    bottom: 1rem;
+    bottom: 24px;
     z-index: 5;
 }
 
 @media screen and (max-width: 996px) {
     .ContactContainer {
-        position: fixed;
-        right: 0.5rem;
-        bottom: 0.5rem;
-        z-index: 5;
+        right: 24px;
     }
 }
-
 .weChat {
-    width: 3.75rem;
+    width: 48px;
     cursor: pointer;
-    height: 3.75rem;
+    height: 48px;
     display: flex;
     justify-content: center;
     text-align: right;
     align-items: center;
-    margin: 1rem;
-    background-color: var(--ifm-table-head-color);
+    margin-bottom: 16px;
+    background-color: var(--ifm-color-primary-tag);
+    border: 1px solid var(--ifm-color-primary);
+    backdrop-filter: blur(15px);
     color: var(--ifm-color-primary);
-    border-radius: 3rem;
-    box-shadow: var(--ifm-color-primary-shadow) 0px 0px 6px 0px;
-}
-.telContainer {
-    width: 3.75rem;
-    cursor: pointer;
-    height: 3.75rem;
-    display: flex;
-    justify-content:flex-end;
-    text-align: center;
-    align-items: center;
-    margin: 1rem;
-    background-color: var(--ifm-table-head-color);
-    color: var(--ifm-color-primary);
-    border-radius: 3rem;
+    border-radius: 48px;
     box-shadow: var(--ifm-color-primary-shadow) 0px 0px 6px 0px;
 }
 
-.telePhone{
-    width: 3.75rem;
+.telContainer {
+    width: 48px;
     cursor: pointer;
-    height: 3.75rem;
+    height: 48px;
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+    background-color: var(--ifm-color-primary-tag);
+    border: 1px solid var(--ifm-color-primary);
+    backdrop-filter: blur(15px);
+    align-items: center;
+    color: var(--ifm-color-primary);
+    border-radius: 48px;
+    box-shadow: var(--ifm-color-primary-shadow) 0px 0px 6px 0px;
+}
+
+.telePhone {
+    width: 48px;
+    cursor: pointer;
+    height: 48px;
     display: flex;
     justify-content: center;
     text-align: right;
     align-items: center;
-    border-radius: 3rem;
+    border-radius: 48px;
 }
-.telContainer>a{
+
+.telContainer>a {
     font-size: 0;
     float: left;
 }
+
 .telePhone>i {
-    font-size: 1.875rem;
+    font-size: 24px;
 }
-.telContainer:hover .telePhone{
+
+.telContainer:hover .telePhone {
     color: var(--ifm-table-head-color);
     transition: 0.5s;
     background-color: var(--ifm-color-primary);
@@ -71,34 +74,37 @@
 
 @keyframes long {
     from {
-        width: 3.75rem;
+        /* width: 48px; */
     }
 
     to {
-        width: 18rem;
+        width:240px;
+        border: none;
+        background-color: var(--ifm-table-head-color);
     }
 }
-.telContainer:hover{
+
+.telContainer:hover {
     transition: all 0.4s ease 0s;
     animation-name: long;
     animation-duration: 0.5s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
-    height: 3.75rem;
+    height: 48px;
 }
 
 @keyframes fontBig {
     from {
-        font-size: 0rem;
+        /* font-size: 0px; */
     }
 
     to {
-        font-size: 1.875rem;
+        font-size: 24px;
     }
 }
 
-.telContainer:hover a{
-    margin-right: 0.5rem;
+.telContainer:hover a {
+    margin-right: 12px;
     /* transition: all 0.4s ease 0s; */
     animation-delay: 0.2s;
     animation-name: fontBig;
@@ -107,13 +113,13 @@
     animation-fill-mode: forwards;
 }
 
-.telContainer>a:hover{
+.telContainer>a:hover {
     text-decoration: none;
 }
 
 
 .weChat>i {
-    font-size: 1.875rem;
+    font-size: 24px;
 }
 
 .contactImg {
@@ -121,6 +127,7 @@
     height: 0;
     /* filter: hue-rotate(180deg) brightness(2) saturate(1.2); */
 }
+
 html[data-theme='dark'] .contactImg {
     filter: hue-rotate(180deg) brightness(2) saturate(1.2);
 }
@@ -147,29 +154,31 @@ html[data-theme='dark'] .contactImg {
     animation-duration: 0.5s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
-    border-radius: 0.625rem;
+    border-radius: 12px;
 }
 
 @keyframes big {
     from {
-        width: 3.75rem;
-        height: 3.75rem;
+        /* width: 48px;
+        height: 48px; */
     }
 
     to {
-        width: 12.5rem;
-        height: 12.5rem;
+        width: 160px;
+        height: 160px;
+        border: none;
+        background-color: var(--ifm-table-head-color);
     }
 }
 
 @keyframes imgbig {
     from {
-        width: 0;
-        height: 0;
+        /* width: 0;
+        height: 0; */
     }
 
     to {
-        width: 12rem;
-        height: 12rem;
+        width: 150px;
+        height: 150px;
     }
 }
