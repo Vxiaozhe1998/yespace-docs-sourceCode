@@ -13,22 +13,7 @@
         right: 24px;
     }
 }
-.weChat {
-    width: 48px;
-    cursor: pointer;
-    height: 48px;
-    display: flex;
-    justify-content: center;
-    text-align: right;
-    align-items: center;
-    margin-bottom: 16px;
-    background-color: var(--ifm-color-primary-tag);
-    border: 1px solid var(--ifm-color-primary);
-    backdrop-filter: blur(15px);
-    color: var(--ifm-color-primary);
-    border-radius: 48px;
-    box-shadow: var(--ifm-color-primary-shadow) 0px 0px 6px 0px;
-}
+
 
 .telContainer {
     width: 48px;
@@ -118,10 +103,29 @@
 }
 
 
+.weChat {
+    width: 48px;
+    cursor: pointer;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+    margin-bottom: 16px;
+    background-color: var(--ifm-color-primary-tag);
+    border: 1px solid var(--ifm-color-primary);
+    backdrop-filter: blur(15px);
+    color: var(--ifm-color-primary);
+    border-radius: 48px;
+    box-shadow: var(--ifm-color-primary-shadow) 0px 0px 6px 0px;
+}
+
 .weChat>i {
     font-size: 24px;
 }
-
+.contactArea{
+    font-size: 0;
+}
 .contactImg {
     width: 0;
     height: 0;
@@ -142,17 +146,29 @@ html[data-theme='dark'] .contactImg {
     animation-name: imgbig;
     animation-duration: 0.5s;
     animation-timing-function: ease;
+
     animation-fill-mode: forwards;
 }
+.weChat:hover .contactArea {
+    color: var(--ifm-table-head-color);
+    transition: all 0.4s linear;
+    animation-name: fontbig;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    /* animation-delay: 0.5s; */
+    /* animation-timing-function: ease; */
+    animation-fill-mode: forwards;
+}
+
 
 .weChat:hover {
     /* box-shadow: none; */
     /* background-color: var(--ifm-color-primary); */
     color: var(--ifm-table-head-color);
-    transition: all 0.4s ease 0s;
+    transition: all 0.4s linear;
     animation-name: big;
     animation-duration: 0.5s;
-    animation-timing-function: ease;
+    /* animation-timing-function: ease; */
     animation-fill-mode: forwards;
     border-radius: 12px;
 }
@@ -164,9 +180,11 @@ html[data-theme='dark'] .contactImg {
     }
 
     to {
-        width: 160px;
-        height: 160px;
+        width: auto;
+        height: auto;
+        /* height: 320px; */
         border: none;
+        padding: 6px;
         background-color: var(--ifm-table-head-color);
     }
 }
@@ -180,5 +198,18 @@ html[data-theme='dark'] .contactImg {
     to {
         width: 150px;
         height: 150px;
+    }
+}
+@keyframes fontbig {
+    from {
+        /* width: 0;
+        height: 0; */
+        font-size: 0px;
+        opacity: 0;
+    }
+
+    to {
+        font-size: 16px;
+        opacity: 100%;
     }
 }

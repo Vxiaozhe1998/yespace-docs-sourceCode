@@ -253,8 +253,8 @@ export default class AboutUniversity extends React.Component {
             <Swiper
               slidesPerView={this.state.size}
               spaceBetween={30}
-              // centeredSlides={true}
-              // centeredSlidesBounds={true}
+              centeredSlides={true}
+              centeredSlidesBounds={true}
               autoplay={{
                 delay: 5000,
                 disableOnInteraction: false,
