@@ -12,17 +12,10 @@ export default class ContactModel extends React.Component {
       <section className={styles.ContactContainer}>
         {/* <a href="" className={styles.contactTel}> */}
         <div className={clsx(styles.weChat)}>
-          <div className={styles.contactArea}>
-            <p>扫码添加微信客服</p>
-            <img
-              src="/yespace-docs/img/contact.png"
-              className={styles.contactImg}
-            />
-            <p>发起在线聊天</p>
-            <a href="https://work.weixin.qq.com/kfid/kfc1577b6d1b6dd6405">
-            在线聊天
-          </a>
-          </div>
+          <img
+            src="/yespace-docs/img/contact.png"
+            className={styles.contactImg}
+          />
           <i className={"yespace yyweixin"}></i>
         </div>
         {/* </a> */}
