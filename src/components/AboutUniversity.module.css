@@ -7,6 +7,9 @@
     width: 100%;
     overflow: hidden;
     position: relative;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
     /* background-color: var(--ifm-color-gray-200); */
 }
 
@@ -17,20 +20,14 @@
     left: 0px;
     right: 0px;
     pointer-events: none;
-    background-image: linear-gradient(to right, var(--ifm-color-primary-mask),
-            var(--ifm-color-primary-mask-gradient) 20%,
-            var(--ifm-color-primary-mask-gradient) 80%,
-            var(--ifm-color-primary-mask));
+    background-image: linear-gradient(to right, var(--ifm-color-primary-mask), var(--ifm-color-primary-mask-gradient) 20%, var(--ifm-color-primary-mask-gradient) 80%, var(--ifm-color-primary-mask));
     height: 100%;
     z-index: 1;
 }
 
 @media screen and (max-width: 996px) {
     .universities::after {
-        background-image: linear-gradient(to right, var(--ifm-color-primary-mask),
-                var(--ifm-color-primary-mask-gradient) 0%,
-                var(--ifm-color-primary-mask-gradient) 100%,
-                var(--ifm-color-primary-mask));
+        background-image: linear-gradient(to right, var(--ifm-color-primary-mask), var(--ifm-color-primary-mask-gradient) 0%, var(--ifm-color-primary-mask-gradient) 100%, var(--ifm-color-primary-mask));
     }
 }
 
@@ -52,15 +49,15 @@
     padding: 1rem !important;
 }
 
-
 .universityCard:hover {
-    box-shadow: 4px 4px 12px var(--ifm-neumorphism-dark),
-        -4px -4px 12px var(--ifm-neumorphism-light);
+    box-shadow: 4px 4px 12px var(--ifm-neumorphism-dark), -4px -4px 12px var(--ifm-neumorphism-light);
     border-radius: 10px;
     transition: 0.5s;
 }
 
+
 /* 高校卡片链接样式 */
+
 .universitiyCardLink {
     color: var(--ifm-heading-color);
 }
@@ -126,6 +123,7 @@ html[data-theme='dark'] .url:hover {
     color: var(--ifm-color-gray-900);
 }
 
+
 /* 内容样式 */
 
 .iconfontTag {
@@ -140,6 +138,7 @@ html[data-theme='dark'] .url:hover {
 
 
 /* 样式代码 */
+
 code {
     background-color: var(--ifm-color-primary-tag);
     color: var(--ifm-color-primary) !important;

@@ -47,7 +47,7 @@ function HomepageHeader() {
                 className="button button--secondary button--lg"
                 to="/business/intro"
               >
-                商务咨询 ☎️
+                商务合作 🤝
               </Link>
             </div>
           </div>
