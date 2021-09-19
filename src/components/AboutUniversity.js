@@ -89,16 +89,30 @@ const UniversityList = [
     ),
   },
   {
+    title: "广东医科大学",
+    Svg: require("../../static/img/university/gdmu.svg").default,
+    position: ["广东省湛江市"],
+    date: "2021年9月11日",
+    count: "36",
+    url: "business/case/gdmu",
+    description: (
+      <>
+        Extend or customize your website layout by reusing React. Docusaurus can
+        be extended while reusing the same header and footer.
+      </>
+    ),
+  },
+  {
     title: "安徽师范大学",
     Svg: require("../../static/img/university/ahnu.svg").default,
     position: ["安徽省芜湖市"],
-    date: "预计2021年9月",
+    date: "2021年9月13日",
     url: "business/case/ahnu",
-    count: "340格",
+    count: "384格",
     description: (
       <>
-        本应定于 <code>2021</code> 年 <code>8</code>{" "}
-        月底进行安装部署悠悦智能共享存包柜，受疫情影响暂作推迟，在此期间，我们{" "}
+        我们于 <code>2021</code> 年 <code>9</code>{" "}
+        月 <code>12</code> 日凌晨完成悠悦智能共享存包柜的部署，我们不断{" "}
         <strong>优化产品工艺</strong> ，制定更为详细的{" "}
         <strong>宣传指引物料规范</strong>，
         <strong>升级并完善安装部署流程</strong>，目前可以保证每天部署{" "}
@@ -128,7 +142,6 @@ const UniversityList = [
       </>
     ),
   },
-  /**
   {
     title: "同济大学",
     Svg: require("../../static/img/university/tongji.svg").default,
@@ -142,7 +155,7 @@ const UniversityList = [
         be extended while reusing the same header and footer.
       </>
     ),
-  }, */
+  },
   {
     title: "杭州电子科技大学",
     Svg: require("../../static/img/university/hdu.svg").default,
@@ -155,7 +168,9 @@ const UniversityList = [
         <strong>以品质求生存，以需求定方向。</strong>
         我们相信我们产品的质量，我们可以为意向高校 <strong>免费</strong>{" "}
         提供一组智能共享存包柜进行试用，试用过程中馆方可随时决定是否与我们合作。软件方面，产品出厂随赠{" "}
-        <strong>悠悦易存基础使用系统</strong>，基础系统完全可以满足馆方与同学们的管理使用需求，馆方也可以通过我们来 <strong>深度集成定制</strong> 专属系统。
+        <strong>悠悦易存基础使用系统</strong>
+        ，基础系统完全可以满足馆方与同学们的管理使用需求，馆方也可以通过我们来{" "}
+        <strong>深度集成定制</strong> 专属系统。
       </>
     ),
   },
