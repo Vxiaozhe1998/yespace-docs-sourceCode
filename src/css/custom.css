@@ -373,7 +373,7 @@ td a:hover::after {
     /* border-bottom: 3px dotted var(--ifm-color-primary) !important; */
 }
 
-.blogPostTitle_node_modules-\@docusaurus-theme-classic-lib-next-theme-BlogPostItem-styles-module>a: hover {
+.blogPostTitle_node_modules-\@docusaurus-theme-classic-lib-next-theme-BlogPostItem-styles-module> a:hover {
     text-decoration: none;
     /* transition: 0.5s; */
     border-bottom: 3px dotted var(--ifm-color-primary-darkest);
