@@ -71,8 +71,8 @@ export default function Home() {
       <main className={clsx("animate__animated animate__fadeInUp")}>
         <AboutUniversity />
         <BusinessModel />
-        {/* <NewsModel /> */}
-        {/* <HomepageFeatures /> */}
+        {/* <NewsModel />
+        <HomepageFeatures /> */}
       </main>
     </Layout>
   );

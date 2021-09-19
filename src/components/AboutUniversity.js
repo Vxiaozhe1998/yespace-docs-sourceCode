@@ -111,8 +111,8 @@ const UniversityList = [
     count: "384格",
     description: (
       <>
-        我们于 <code>2021</code> 年 <code>9</code>{" "}
-        月 <code>12</code> 日凌晨完成悠悦智能共享存包柜的部署，我们不断{" "}
+        我们于 <code>2021</code> 年 <code>9</code> 月 <code>12</code>{" "}
+        日凌晨完成悠悦智能共享存包柜的部署，我们不断{" "}
         <strong>优化产品工艺</strong> ，制定更为详细的{" "}
         <strong>宣传指引物料规范</strong>，
         <strong>升级并完善安装部署流程</strong>，目前可以保证每天部署{" "}
@@ -173,7 +173,7 @@ const UniversityList = [
         <strong>深度集成定制</strong> 专属系统。
       </>
     ),
-  },
+  }
 ];
 
 function Position({ position }) {
