@@ -1162,8 +1162,8 @@
 
 "@docusaurus/core@2.0.0-beta.6", "@docusaurus/core@^2.0.0-beta.6":
   version "2.0.0-beta.6"
-  resolved "https://registry.nlark.com/@docusaurus/core/download/@docusaurus/core-2.0.0-beta.6.tgz#9847ae211a04f1d2b057f8e5ba650e76b9c2df83"
-  integrity sha1-mEeuIRoE8dKwV/jlumUOdrnC34M=
+  resolved "https://registry.yarnpkg.com/@docusaurus/core/-/core-2.0.0-beta.6.tgz#9847ae211a04f1d2b057f8e5ba650e76b9c2df83"
+  integrity sha512-XMeI+lJKeJBGYBNOfO/Tc+5FMf21E5p1xZjfe75cgYcfZdERZ+W7aemXquwReno8xxHb4Rnfmi9dxkbOLDjqDA==
   dependencies:
     "@babel/core" "^7.12.16"
     "@babel/generator" "^7.12.15"
@@ -1385,8 +1385,8 @@
 
 "@docusaurus/preset-classic@^2.0.0-beta.6":
   version "2.0.0-beta.6"
-  resolved "https://registry.nlark.com/@docusaurus/preset-classic/download/@docusaurus/preset-classic-2.0.0-beta.6.tgz#528c98939589ae5edfc2a7e01e9f87561e5d5c01"
-  integrity sha1-UoyYk5WJrl7fwqfgHp+HVh5dXAE=
+  resolved "https://registry.yarnpkg.com/@docusaurus/preset-classic/-/preset-classic-2.0.0-beta.6.tgz#528c98939589ae5edfc2a7e01e9f87561e5d5c01"
+  integrity sha512-riqQRcNssNH7oto8nAjYIO79/ZucidexHTDlgD+trP56ploHLJp4kIlxb44IGOmx3es8/z4egWtM+acY/39N2Q==
   dependencies:
     "@docusaurus/core" "2.0.0-beta.6"
     "@docusaurus/plugin-content-blog" "2.0.0-beta.6"
@@ -1453,8 +1453,8 @@
 
 "@docusaurus/theme-live-codeblock@^2.0.0-beta.6":
   version "2.0.0-beta.6"
-  resolved "https://registry.nlark.com/@docusaurus/theme-live-codeblock/download/@docusaurus/theme-live-codeblock-2.0.0-beta.6.tgz#f46e83f230470d6dd741dc309e415541aeee3862"
-  integrity sha1-9G6D8jBHDW3XQdwwnkFVQa7uOGI=
+  resolved "https://registry.yarnpkg.com/@docusaurus/theme-live-codeblock/-/theme-live-codeblock-2.0.0-beta.6.tgz#f46e83f230470d6dd741dc309e415541aeee3862"
+  integrity sha512-TDHZbaKDR9S5uVtjiM5QZbOOKGUfAGHo+1KSZ8dIaIjAsA55sayYmX9MxbhUvQCkAb3vKKvnr8S9cv1Vi1l/gA==
   dependencies:
     "@docusaurus/core" "2.0.0-beta.6"
     "@docusaurus/utils-validation" "2.0.0-beta.6"
